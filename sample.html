@@ -1,0 +1,63 @@
+<html>
+<head>
+    <link rel="stylesheet" href="jquery-text-box.css">
+</head>
+<body>
+    <div id="myDialPad" style="display: inline-block; height: 50px; line-height: 50px; font-size: 42px;">Sample text</div>
+    
+    <div style="text-align: center;">
+        <button class="delete">Delete</button>
+        <button class="backspace">Backspace</button>
+    </div>
+    
+    <div class="keyboard" style="text-align: center;">
+        <button>A</button>
+        <button>B</button>
+        <button>C</button>
+        <button>D</button>
+        <button>E</button>
+        <button>F</button>
+        <button>G</button>
+        <button>H</button>
+        <button>I</button>
+        <button>J</button>
+        <button>K</button>
+        <button>L</button>
+        <button>M</button>
+        <button>N</button>
+        <button>O</button>
+        <button>P</button>
+        <button>Q</button>
+        <button>R</button>
+        <button>S</button>
+        <button>T</button>
+        <button>U</button>
+        <button>V</button>
+        <button>W</button>
+        <button>X</button>
+        <button>Y</button>
+        <button>Z</button>
+    </div>
+    
+    
+    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="jquery-text-box.js"></script>
+    <script>
+        
+        $("#myDialPad").fluxionTextBox();
+        
+        $(".keyboard button").click(function() {
+            $("#myDialPad").type($(this).html());
+        });
+        
+        $(".delete").click(function() {
+            $("#myDialPad").delete();
+        });
+        
+        $(".backspace").click(function() {
+            $("#myDialPad").backspace();
+        });
+        
+    </script>
+</body>
+</html>
