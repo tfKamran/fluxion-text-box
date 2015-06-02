@@ -54,10 +54,6 @@
         
         var index = parseInt(((event.originalEvent.x / $(this).width()) * text.length));
         
-        console.log($(this).width());
-        console.log(event.originalEvent.x);
-        console.log(index);
-        
         $(this).html(text.split("").getAllInLeftOfIndex(index).join("") + cursorMarkup + text.split("").getAllInRightOfIndex(index).join(""));
         
         refreshCursor($(this));
